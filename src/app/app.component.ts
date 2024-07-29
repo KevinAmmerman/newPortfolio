@@ -11,6 +11,4 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'newPortfolio';
-
-  test: string[] = ['hallo', 'du', 'wie'];
 }

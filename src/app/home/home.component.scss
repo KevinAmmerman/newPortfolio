@@ -1,24 +1,156 @@
 main {
   max-width: 1920px;
   margin: auto;
-  height: calc(100svh - 95px);
+  height: 100svh;
   position: relative;
-  top: 95px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .vector_right {
   position: absolute;
-  width: 700px;
-  height: 700px;
-  right: 0;
-  top: -50px;
+  width: auto;
+  height: 450px;
+  right: -150px;
+  top: 0;
 }
 
 .vector_left {
   position: absolute;
-  width: 700px;
-  height: 700px;
-  left: 0;
+  width: auto;
+  height: 450px;
+  left: -150px;
   bottom: 0;
   transform: scaleX(-1);
+}
+
+// MAIN CONTENT
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+
+  h1,
+  span {
+    color: white;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.line-1 {
+  position: relative;
+  width: 24em;
+  border-right: 2px solid #ff9142;
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  color: white;
+  letter-spacing: 0.15em;
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 0.5s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: #ff9142;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+// IMAGE MAIN CONTENT
+
+.picture_me {
+  height: clamp(250px, 30vw, 450px);
+  border-radius: 2rem;
+}
+
+.image_container {
+  position: relative;
+}
+
+.picture_vector_top {
+  position: absolute;
+  width: 6rem;
+  top: -15px;
+  right: 25px;
+}
+
+.picture_vector_left {
+  height: 9rem;
+  position: absolute;
+  left: -25px;
+  bottom: 20px;
+}
+
+// TECH STACK ICONS
+
+.tech_stack_container {
+  position: absolute;
+  bottom: 0;
+
+  //   img {
+  //     height: 2.5rem;
+  //   }
+
+  //   img:hover {
+  //     animation: bounce 1.5s ease-in;
+  //   }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+
+  30% {
+    transform: scale(0.9, 1.1) translateY(-35px);
+  }
+
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
