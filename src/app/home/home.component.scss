@@ -1,0 +1,24 @@
+main {
+  max-width: 1920px;
+  margin: auto;
+  height: calc(100svh - 95px);
+  position: relative;
+  top: 95px;
+}
+
+.vector_right {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  right: 0;
+  top: -50px;
+}
+
+.vector_left {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(-1);
+}
