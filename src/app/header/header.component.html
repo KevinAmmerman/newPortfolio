@@ -1,9 +1,22 @@
 <header>
     <div style="color: #8d8d8d;">Kevin</div>
-    <nav>
-        <a class="link_style hover-underline-animation" href="/home">HOME</a>
-        <a class="link_style hover-underline-animation" href="/about-me">ABOUT ME</a>
-        <a class="link_style hover-underline-animation" href="/my-works">MY WORK</a>
-        <a class="link_style contact_btn btn_hover_orange" href="/contact">CONTACT</a>
+    <nav class="desktop_nav">
+        <a [class.active_link]="activeSection === ''" class="link_style hover-underline-animation" href="/">HOME</a>
+        <a [class.active_link]="activeSection === 'about-me'" class="link_style hover-underline-animation"
+            href="/about-me">ABOUT ME</a>
+        <a [class.active_link]="activeSection === 'my-work'" class="link_style hover-underline-animation"
+            href="/my-work">MY WORK</a>
+        <a [class.active_link]="activeSection === 'contact'" class="link_style contact_btn btn_hover_orange"
+            href="/contact">CONTACT</a>
+    </nav>
+    <div (click)="openMenu()" [class.active]="menuOpen" class="menu_toggler"><span></span></div>
+    <nav class="mobile_nav" [class.active]="menuOpen">
+        <a [class.active_link]="activeSection === ''" class="link_style hover-underline-animation" href="/">HOME</a>
+        <a [class.active_link]="activeSection === 'about-me'" class="link_style hover-underline-animation"
+            href="/about-me">ABOUT ME</a>
+        <a [class.active_link]="activeSection === 'my-work'" class="link_style hover-underline-animation"
+            href="/my-work">MY WORK</a>
+        <a [class.active_link]="activeSection === 'contact'" class="link_style contact_btn btn_hover_orange"
+            href="/contact">CONTACT</a>
     </nav>
 </header>

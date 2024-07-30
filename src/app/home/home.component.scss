@@ -27,6 +27,17 @@ main {
   transform: scaleX(-1);
 }
 
+@media (width < 450px) {
+  .vector_right {
+    right: -350px;
+  }
+
+  .vector_left {
+    left: -350px;
+    bottom: -50px;
+  }
+}
+
 // MAIN CONTENT
 
 .container {
@@ -36,7 +47,11 @@ main {
 
   h1 {
     margin-bottom: 0.5rem;
-    font-size: 2.5rem;
+    font-size: clamp(0.5rem, 8.5vw, 2.5rem);
+
+    @media (width < 450px) {
+      text-align: center;
+    }
   }
 
   h1,
@@ -45,7 +60,7 @@ main {
   }
 
   span {
-    font-size: 1.5rem;
+    font-size: clamp(0.5rem, 5vw, 1.2rem);
   }
 }
 
@@ -115,42 +130,4 @@ main {
 .tech_stack_container {
   position: absolute;
   bottom: 0;
-
-  //   img {
-  //     height: 2.5rem;
-  //   }
-
-  //   img:hover {
-  //     animation: bounce 1.5s ease-in;
-  //   }
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-
-  30% {
-    transform: scale(0.9, 1.1) translateY(-35px);
-  }
-
-  50% {
-    transform: scale(1, 1) translateY(0);
-  }
-
-  57% {
-    transform: scale(1, 1) translateY(-7px);
-  }
-
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
 }
