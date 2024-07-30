@@ -1,0 +1,40 @@
+.divider {
+  padding: 0 5rem;
+  border-top: 1px solid #8d8d8d;
+}
+
+footer {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8d8d8d;
+
+  @media (width < 800px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .social_icons_container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .legal_container {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      text-decoration: none;
+      color: #8d8d8d;
+    }
+  }
+}
+
+.link_hover {
+  transition: transform 150ms ease-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
