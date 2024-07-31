@@ -1,0 +1,82 @@
+<section>
+    <img class="vector_left" src="assets/vectors/vector_one.png" alt="cloud">
+    <div class="headline_container">
+        <h1>Contact Me</h1>
+    </div>
+    <div class="contact_container">
+        <div class="contact_contant">
+            <span>Get In Touch With Me</span>
+            <!-- <p>
+                Reach out to me using the form to kickstart our collaboration! Whether you have a specific project
+                in mind, want to discuss ideas, or simply have a question, I'm here to help. Looking forward to
+                hearing from you!
+            </p> -->
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+            <div class="form_row">
+                <label for="name"></label>
+                <input [class.disabled]="isSent" id="name" formControlName="name" type="text"
+                    placeholder="First & Last Name"
+                    [class.error-border]="contactForm.get('name')?.invalid && isSubmitted"
+                    [class.success-border]="contactForm.get('name')?.valid">
+                <div class="error_box">
+                    <small
+                        *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required'] || contactForm.get('name')?.invalid && !isSent && isSubmitted">Please
+                        enter your name.</small>
+                </div>
+            </div>
+            <div class="form_row">
+                <label for="email"></label>
+                <input [class.disabled]="isSent" id="email" formControlName="email" type="email"
+                    placeholder="Your Email" [class.error-border]="contactForm.get('email')?.invalid && isSubmitted"
+                    [class.success-border]="contactForm.get('email')?.valid">
+                <div class="error_box">
+                    <small
+                        *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required'] || contactForm.get('email')?.invalid && !isSent && isSubmitted">Please
+                        enter your e-mail.</small>
+                    <small *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']">This
+                        is not a valid e-mail.</small>
+                </div>
+            </div>
+            <div class="form_row">
+                <label for="text"></label>
+                <textarea [class.disabled]="isSent" id="text" formControlName="text" placeholder="Your Message"
+                    name="message" id="message" cols="30" rows="10"
+                    [class.error-border]="contactForm.get('text')?.invalid && isSubmitted"
+                    [class.success-border]="contactForm.get('text')?.valid"></textarea>
+                <div class="error_box">
+                    <small
+                        *ngIf="contactForm.get('text')?.touched && contactForm.get('text')?.errors?.['required'] || contactForm.get('text')?.invalid && !isSent && isSubmitted">Please
+                        enter a message.</small>
+                </div>
+            </div>
+            <div class="privacy-box">
+                <div class="cbx">
+                    <input formControlName="privacy" id="cbx" type="checkbox" />
+                    <label for="cbx"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                </div>
+                <span [class.error-border]="!contactForm.get('privacy')?.value && isSubmitted">I've read the <a
+                        routerLink="privacy-policy">privacy policy</a> and agree to the processing of my data as
+                    outlined.</span>
+            </div>
+            <div class="btn_box">
+                <button type="submit" [disabled]="isSent">{{ message }}</button>
+            </div>
+            <div [class.dNone]="!isSent" class="container_animation">
+                <div class="box">
+                    <div class="border one"></div>
+                    <div class="border two"></div>
+                    <div class="border three"></div>
+                    <div class="border four"></div>
+
+                    <div class="line one"></div>
+                    <div class="line two"></div>
+                    <div class="line three"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

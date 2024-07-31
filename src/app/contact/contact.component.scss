@@ -1,0 +1,25 @@
+section {
+  max-width: 1920px;
+  height: 100svh;
+  padding-top: 130px;
+}
+
+.vector_left {
+  position: absolute;
+  width: auto;
+  height: 450px;
+  left: -300px;
+  top: 0;
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
+.headline_container {
+  color: white;
+  margin: 0 80px;
+  border-bottom: 1px solid #8d8d8d;
+
+  h1 {
+    font-size: 3rem;
+  }
+}

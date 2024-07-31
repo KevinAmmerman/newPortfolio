@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -11,13 +12,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HeaderComponent {
   menuOpen: boolean = false;
   activeSection: string = '';
-  router = inject(ActivatedRoute);
+  router = inject(Router);
 
-  constructor() {
-    const test = this.router.url.subscribe((params) => {
-      console.log(params[0].path);
-    });
-  }
+  constructor() {}
 
   openMenu(): void {
     this.menuOpen = !this.menuOpen;
