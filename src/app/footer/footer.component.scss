@@ -1,5 +1,5 @@
 footer {
-  padding: 2rem 5rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +25,15 @@ footer {
       color: #8d8d8d;
     }
   }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .link_hover {

@@ -4,8 +4,8 @@
         <h1>Contact Me</h1>
     </div>
     <div class="contact_container">
-        <div class="contact_contant">
-            <span>Get In Touch With Me</span>
+        <div class="contact_content">
+            <h2>Get In Touch With Me</h2>
             <!-- <p>
                 Reach out to me using the form to kickstart our collaboration! Whether you have a specific project
                 in mind, want to discuss ideas, or simply have a question, I'm here to help. Looking forward to
@@ -14,11 +14,10 @@
         </div>
         <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
             <div class="form_row">
-                <label for="name"></label>
-                <input [class.disabled]="isSent" id="name" formControlName="name" type="text"
-                    placeholder="First & Last Name"
-                    [class.error-border]="contactForm.get('name')?.invalid && isSubmitted"
-                    [class.success-border]="contactForm.get('name')?.valid">
+                <label for="name">Name</label>
+                <input [class.disabled]="isSent" id="name" class="input_style" formControlName="name" type="text"
+                    [class.error_border]="contactForm.get('name')?.invalid && isSubmitted"
+                    [class.success_border]="contactForm.get('name')?.valid">
                 <div class="error_box">
                     <small
                         *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required'] || contactForm.get('name')?.invalid && !isSent && isSubmitted">Please
@@ -26,10 +25,10 @@
                 </div>
             </div>
             <div class="form_row">
-                <label for="email"></label>
-                <input [class.disabled]="isSent" id="email" formControlName="email" type="email"
-                    placeholder="Your Email" [class.error-border]="contactForm.get('email')?.invalid && isSubmitted"
-                    [class.success-border]="contactForm.get('email')?.valid">
+                <label for="email">E-mail</label>
+                <input [class.disabled]="isSent" id="email" class="input_style" formControlName="email" type="email"
+                    [class.error_border]="contactForm.get('email')?.invalid && isSubmitted"
+                    [class.success_border]="contactForm.get('email')?.valid">
                 <div class="error_box">
                     <small
                         *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required'] || contactForm.get('email')?.invalid && !isSent && isSubmitted">Please
@@ -39,11 +38,11 @@
                 </div>
             </div>
             <div class="form_row">
-                <label for="text"></label>
-                <textarea [class.disabled]="isSent" id="text" formControlName="text" placeholder="Your Message"
+                <label class="text_area_label_margin_bottom" for="text">Message</label>
+                <textarea [class.disabled]="isSent" id="text" class="input_style text_area_style" formControlName="text"
                     name="message" id="message" cols="30" rows="10"
-                    [class.error-border]="contactForm.get('text')?.invalid && isSubmitted"
-                    [class.success-border]="contactForm.get('text')?.valid"></textarea>
+                    [class.text_area_error_border]="contactForm.get('text')?.invalid && isSubmitted"
+                    [class.text_area_success_border]="contactForm.get('text')?.valid"></textarea>
                 <div class="error_box">
                     <small
                         *ngIf="contactForm.get('text')?.touched && contactForm.get('text')?.errors?.['required'] || contactForm.get('text')?.invalid && !isSent && isSubmitted">Please
@@ -58,12 +57,12 @@
                         <path d="M2 8.36364L6.23077 12L13 2"></path>
                     </svg>
                 </div>
-                <span [class.error-border]="!contactForm.get('privacy')?.value && isSubmitted">I've read the <a
+                <span [class.error_border]="!contactForm.get('privacy')?.value && isSubmitted">I've read the <a
                         routerLink="privacy-policy">privacy policy</a> and agree to the processing of my data as
                     outlined.</span>
             </div>
             <div class="btn_box">
-                <button type="submit" [disabled]="isSent">{{ message }}</button>
+                <button class="btn_style" type="submit" [disabled]="isSent">{{ message }}</button>
             </div>
             <div [class.dNone]="!isSent" class="container_animation">
                 <div class="box">
