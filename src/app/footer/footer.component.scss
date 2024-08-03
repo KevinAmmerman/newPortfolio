@@ -6,11 +6,6 @@ footer {
   color: #8d8d8d;
   background-color: #131313;
 
-  @media (width < 800px) {
-    flex-direction: column;
-    gap: rem;
-  }
-
   .social_icons_container {
     display: flex;
     gap: 2rem;
@@ -34,6 +29,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (width < 680px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .link_hover {

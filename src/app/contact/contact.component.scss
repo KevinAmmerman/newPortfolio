@@ -1,8 +1,12 @@
 section {
   max-width: 1280px;
   height: 100svh;
-  padding-top: 130px;
+  padding: 8.75rem 5rem 0;
   margin: auto;
+
+  @media (width < 575px) {
+    padding: 5rem 2rem 2rem;
+  }
 }
 
 .vector_left {
@@ -17,11 +21,15 @@ section {
 
 .headline_container {
   color: white;
-  margin: 80px 0;
+  margin: 5rem 0;
   border-bottom: 1px solid #8d8d8d;
 
   h1 {
     font-size: 3rem;
+  }
+
+  @media (width < 1100px) {
+    margin: 2.5rem 0;
   }
 }
 
@@ -29,6 +37,11 @@ section {
   display: flex;
   justify-content: space-between;
   color: white;
+
+  @media (width < 1100px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 form {
@@ -40,6 +53,13 @@ form {
 .form_row {
   display: flex;
   flex-direction: column;
+}
+
+.btn_box {
+  @media (width < 950px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .btn_style {
@@ -94,6 +114,17 @@ label {
   font-size: 1rem;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #8d8d8d inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+
 // INPUT FIELDS ERROR HANDLING
 
 input.ng-invalid.ng-touched {
@@ -139,7 +170,7 @@ small {
   span {
     color: white;
     font-size: 1rem;
-    margin-left: 35px;
+    margin-left: 2.2rem;
 
     a {
       text-decoration: none;
@@ -170,16 +201,16 @@ input[type="checkbox"]:focus {
 
 .cbx {
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .cbx input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 2px solid #bfbfc0;
   border-radius: 50%;
   transition: all 0.2s ease;
@@ -191,8 +222,8 @@ input[type="checkbox"]:focus {
 }
 
 .cbx label {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   background: none;
   border-radius: 50%;
   position: absolute;
