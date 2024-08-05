@@ -16,7 +16,7 @@ import {
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  message: string = 'Send message :)';
+  message: string = 'Send';
   contactForm: FormGroup;
   isSubmitted: boolean = false;
   isSent: boolean = false;
