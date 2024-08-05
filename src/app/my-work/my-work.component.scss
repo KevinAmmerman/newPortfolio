@@ -58,6 +58,16 @@ main {
   color: white;
 }
 
+.img_frame {
+  position: relative;
+
+  &:hover {
+    .hover {
+      display: flex;
+    }
+  }
+}
+
 img {
   border-radius: 0.5rem;
   width: 400px;
@@ -69,14 +79,24 @@ img {
   width: 500px;
 }
 
-.hover_wide {
-  width: 500px;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hover_small {
+.hover_container_small {
   width: 400px;
   height: 250px;
-  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hover_container_wide {
+  width: 500px;
+  height: 250px;
+}
+
+.hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: none;
+  cursor: pointer;
 }
