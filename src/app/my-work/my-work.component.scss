@@ -63,8 +63,17 @@ main {
 
   &:hover {
     .hover {
-      display: flex;
+      animation: optIn 225ms ease-in-out forwards;
     }
+  }
+}
+
+@keyframes optIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -73,6 +82,10 @@ img {
   width: 400px;
   height: 250px;
   object-fit: cover;
+}
+
+.img_position {
+  object-position: top;
 }
 
 .wide_img {
@@ -97,6 +110,7 @@ img {
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  display: none;
+  display: flex;
   cursor: pointer;
+  opacity: 0;
 }
