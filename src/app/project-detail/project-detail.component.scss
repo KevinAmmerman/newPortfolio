@@ -1,0 +1,40 @@
+section {
+  max-width: 1280px;
+  height: 100svh;
+  padding: 8.75rem 5rem 0;
+  margin: auto;
+
+  @media (width < 575px) {
+    padding: 5rem 2rem 2rem;
+  }
+
+  @media (width < 440px) {
+    height: auto;
+  }
+}
+
+.vector_left {
+  position: absolute;
+  width: auto;
+  height: 450px;
+  left: -300px;
+  top: 0;
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
+.headline_container {
+  color: white;
+  margin: 2rem 0 3.5rem;
+  padding-bottom: 2.3rem;
+  border-bottom: 1px solid #8d8d8d;
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  @media (width < 1100px) {
+    margin: 1rem 0;
+  }
+}
