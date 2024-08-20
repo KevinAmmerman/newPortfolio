@@ -4,6 +4,37 @@
         <h1>{{projectName}}</h1>
     </div>
     <main>
-        <img src="{{currentProject.imgPath}}" alt="">
+        <img class="main_img" src="{{currentProject.imgPath}}" alt="">
+        <div class="story_container">
+            <h2>Project Story</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quos id nisi! Debitis est eum
+                culpa. Quia beatae possimus excepturi eaque soluta aspernatur doloribus rerum, repudiandae deserunt
+                labore in asperiores.</p>
+        </div>
+        <div class="img_container">
+            <div class="img_frame">
+                <img src="assets/project_img/da-bubble_mobile.png" alt="">
+                <a
+                    href="https://www.freepik.com/free-psd/dark-smartphone-mockup_9549207.htm#fromView=author&page=1&position=3&uuid=1b4afc2d-f24d-48ca-a57f-258c28a76476">Image
+                    by Deeplab on Freepik</a>
+            </div>
+            <div class="img_frame">
+                <img src="assets/project_img/da-bubble_ipad.png" alt="">
+                <a
+                    href="https://de.freepik.com/freie-psd/schwarze-tablette-auf-holztisch-verspotten-sich_1164934.htm#fromView=search&page=2&position=13&uuid=d65d914a-0c17-42b6-a7f4-ed0691702b77">Bild
+                    von aleksandr_samochernyi auf Freepik</a>
+            </div>
+        </div>
+        <div class="stack_container">
+            <h2>Tech Stack used in this Project</h2>
+            <div class="stack_box">
+                @for (icon of currentProject.stack; track $index) {
+                <div class="icon_frame">
+                    <img src="assets/icons/{{icon.icon}}" height="100" width="100" alt="{{icon.name}}" />
+                    <span>{{icon.name}}</span>
+                </div>
+                }
+            </div>
+        </div>
     </main>
 </section>
