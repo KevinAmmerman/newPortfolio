@@ -5,6 +5,8 @@ interface Technology {
 
 interface Project {
   imgPath: string;
+  mobileImg: string[];
+  tabletImg: string[];
   stack?: Technology[];
 }
 
