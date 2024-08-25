@@ -26,6 +26,7 @@ export class ProjectDetailComponent {
 
   getProjectData(name: string) {
     this.currentProject = this.projects[name];
+    console.log(this.currentProject);
   }
 
   transformName(name: string) {

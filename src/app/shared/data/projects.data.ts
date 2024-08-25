@@ -35,14 +35,18 @@ export const projects: Projects = {
         icon: 'firebase.png',
       },
       {
-        name: 'Git',
-        icon: 'git.png',
-      },
-      {
         name: 'Material Design',
         icon: 'material_design.png',
       },
+      {
+        name: 'Git',
+        icon: 'git.png',
+      },
     ],
+    links: {
+      live: 'https://da-bubble.kevin-ammerman.com/',
+      github: 'https://github.com/KevinAmmerman/DA-Bubble',
+    },
   },
   join: {
     imgPath: 'assets/project_img/join.jpg',
@@ -56,6 +60,28 @@ export const projects: Projects = {
       'https://de.freepik.com/freie-psd/schwarze-tablette-auf-holztisch-verspotten-sich_1164934.htm#fromView=search&page=2&position=13&uuid=d65d914a-0c17-42b6-a7f4-ed0691702b77',
       'Image by aleksandr_samochernyi on Freepik',
     ],
+    stack: [
+      {
+        name: 'JavaScript',
+        icon: 'javascript.png',
+      },
+      {
+        name: 'Html',
+        icon: 'html.png',
+      },
+      {
+        name: 'CSS',
+        icon: 'css.png',
+      },
+      {
+        name: 'Git',
+        icon: 'git.png',
+      },
+    ],
+    links: {
+      live: 'https://join.kevin-ammerman.com/',
+      github: 'https://github.com/KevinAmmerman/Join',
+    },
   },
   'el-pollo-loco': {
     imgPath: 'assets/project_img/el_pollo_loco.png',
@@ -69,11 +95,31 @@ export const projects: Projects = {
       'https://de.freepik.com/freie-psd/schwarze-tablette-auf-holztisch-verspotten-sich_1164934.htm#fromView=search&page=2&position=13&uuid=d65d914a-0c17-42b6-a7f4-ed0691702b77',
       'Image by aleksandr_samochernyi on Freepik',
     ],
-    stack: [],
+    stack: [
+      {
+        name: 'JavaScript',
+        icon: 'javascript.png',
+      },
+      {
+        name: 'OOP',
+        icon: 'oop.png',
+      },
+      {
+        name: 'Html',
+        icon: 'html.png',
+      },
+      {
+        name: 'CSS',
+        icon: 'css.png',
+      },
+      {
+        name: 'Git',
+        icon: 'git.png',
+      },
+    ],
+    links: {
+      live: 'https://el-pollo-loco.kevin-ammerman.com/',
+      github: 'https://github.com/KevinAmmerman/el_pollo_locco',
+    },
   },
 };
-
-/* 
-<a href="https://www.freepik.com/free-psd/horizontal-iphone-15-pro-max-mockup_222046243.htm#fromView=search&page=2&position=49&uuid=f65ac388-6fa0-406d-a1c8-6e91e7d8b64e">Image by originalmockup on Freepik</a>
-
-*/
