@@ -56,6 +56,16 @@ section {
       height: 2rem;
     }
   }
+
+  a {
+    img {
+      transition: filter 200ms ease-in-out;
+    }
+
+    img:hover {
+      filter: invert(59%) sepia(100%) saturate(1000%) hue-rotate(345deg);
+    }
+  }
 }
 
 main {
